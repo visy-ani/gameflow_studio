@@ -2,7 +2,7 @@ import styles from "./HeroSection.module.css";
 import { useState, useRef } from "react";
 
 const HeroSection = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(1);
   const [hasClicked, setHasClicked] = useState(false);
   const [isLoading, setLoading] = useState(false);
   const [loadedVideos, setLoadedVideos] = useState(0);
@@ -18,7 +18,6 @@ const HeroSection = () => {
 
   const handleMiniVideoClick = () => {
     setHasClicked(true);
-
     setCurrentIndex(upcomingVideoIndex);
   };
 
@@ -41,9 +40,21 @@ const HeroSection = () => {
               />
             </div>
           </div>
-          <video 
-            ref={nextVideoRef} 
+          <video
+            ref={nextVideoRef}
             src={getVideoSrc(currentIndex)}
+            loop
+            muted
+            id="next-video"
+            className={styles.backgroundVideo}
+            onLoadedData={handleVideoLoad}
+          />
+          <video
+            src={getVideoSrc(currentIndex === totalVideos + 1 ? 1 : currentIndex)}
+            autoPlay
+            loop
+            muted
+            className={styles.backgroundVideo}
           />
         </div>
       </div>

@@ -49,3 +49,26 @@
     object-fit: cover;
     object-position: center;
 }
+
+.nextVideo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+    z-index: 20;
+    width: 16rem;
+    height: 16rem;
+    object-fit: cover;
+    object-position: center;
+}
+
+.backgroundVideo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
