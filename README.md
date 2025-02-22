@@ -1,56 +1,50 @@
-# 🎮 GameFlow Studio 🚀
+# React + TypeScript + Vite
 
-![GameFlow Studio Banner](https://yourimageurl.com/banner.png)
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Overview 🕹️
-GameFlow Studio is an animation-driven website designed to showcase and complement a game with fluid and dynamic interactions. Built with a strong focus on smooth motion and engaging visuals, the project leverages **GSAP (GreenSock Animation Platform)** extensively to create an immersive user experience.
+Currently, two official plugins are available:
 
-## Features ✨
-- 🎞️ **GSAP-Powered Animations** – Smooth transitions, parallax effects, and timeline-based animations.
-- 🏆 **Interactive UI** – Engaging interactions triggered by user input.
-- ⚡ **Performance Optimized** – Efficient use of animations for a seamless experience.
-- 🎨 **Game-Centric Design** – Visuals and animations tailored to match the game's aesthetic.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Technologies Used 🛠️
-- 🟢 **GSAP (GreenSock Animation Platform)** – Primary animation library.
-- 🌐 **HTML5 & CSS3** – Structuring and styling the website.
-- 📜 **JavaScript (ES6+)** – Core logic and event handling.
-- ⚛️ **React** – Using React for component-based structure.
-- ⚡ **Vite** – For bundling and performance optimization.
+## Expanding the ESLint configuration
 
-## Installation 🏗️
-To set up the project locally:
+If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-1. Clone the repository:
-   ```sh
-   git clone https://github.com/visy-ani/gameflow_studio.git
-   cd gameflow_studio
-   ```
-2. Install dependencies:
-   ```sh
-   pnpm install
-   ```
-3. Run the development server:
-   ```sh
-   pnpm run dev
-   ```
+- Configure the top-level `parserOptions` property like this:
 
-## Usage 🎭
-- 🎥 Navigate through the website to explore various animations.
-- 🖱️ Interact with elements to trigger animations dynamically.
-- 🛠️ Optimize performance by tweaking GSAP animation settings.
+```js
+export default tseslint.config({
+  languageOptions: {
+    // other options...
+    parserOptions: {
+      project: ['./tsconfig.node.json', './tsconfig.app.json'],
+      tsconfigRootDir: import.meta.dirname,
+    },
+  },
+})
+```
 
-## Future Enhancements 🔮
-- 🌌 Add WebGL effects for more immersive visuals.
-- 🎮 Implement a game demo section within the website.
-- 📱 Optimize mobile responsiveness and touch interactions.
+- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
+- Optionally add `...tseslint.configs.stylisticTypeChecked`
+- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
 
+```js
+// eslint.config.js
+import react from 'eslint-plugin-react'
 
-## Contact 📬
-For any inquiries, reach out via:
-- 📧 **Email:** chocoboyanish566@gamil.com
-- 🐙 **GitHub:** [visy-ani](https://github.com/visy-ani)
-
----
-🚀 Enjoy exploring **GameFlow Studio**! 🎮🔥
-
+export default tseslint.config({
+  // Set the react version
+  settings: { react: { version: '18.3' } },
+  plugins: {
+    // Add the react plugin
+    react,
+  },
+  rules: {
+    // other rules...
+    // Enable its recommended rules
+    ...react.configs.recommended.rules,
+    ...react.configs['jsx-runtime'].rules,
+  },
+})
+```

@@ -1,7 +1,8 @@
+import './App.css';
 
 const App = () => {
   return (
-    <div>App</div>
+    <div>Welcome to GameFlow Studio</div>
   )
 }
 
