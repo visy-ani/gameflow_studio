@@ -1,0 +1,51 @@
+.heroSection{
+    position: relative;
+    height: 100dvh;
+    width: 100dvw;
+    overflow-x: hidden;
+}
+
+.videoFrame{
+    position: relative;
+    z-index: 10;
+    height: 100dvh;
+    width: 100dvw;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    background-color: var(--blue-75);
+}
+
+.mask_clip_path{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 50;
+    width: 16rem;
+    height: 16rem;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 0.5rem;
+}
+
+.miniVideo{
+    transform-origin: center;
+    transform: scale(0.5);
+    opacity: 0;
+    transition: all 0.5s ease-in;
+}
+
+.miniVideo:hover{
+    transform: scale(1);
+    opacity: 1;
+}
+
+.video{
+    width: 16rem;
+    height: 16rem;
+    transform-origin: center;
+    transform: scale(1.5);
+    object-fit: cover;
+    object-position: center;
+}
