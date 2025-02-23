@@ -1,11 +1,11 @@
-.heroSection{
+.heroSection {
     position: relative;
     height: 100dvh;
     width: 100dvw;
     overflow-x: hidden;
 }
 
-.videoFrame{
+.videoFrame {
     position: relative;
     z-index: 10;
     height: 100dvh;
@@ -15,7 +15,7 @@
     background-color: var(--blue-75);
 }
 
-.mask_clip_path{
+.mask_clip_path {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     position: absolute;
     top: 50%;
@@ -29,19 +29,19 @@
     border-radius: 0.5rem;
 }
 
-.miniVideo{
+.miniVideo {
     transform-origin: center;
     transform: scale(0.5);
     opacity: 0;
     transition: all 0.5s ease-in;
 }
 
-.miniVideo:hover{
+.miniVideo:hover {
     transform: scale(1);
     opacity: 1;
 }
 
-.video{
+.video {
     width: 16rem;
     height: 16rem;
     transform-origin: center;
@@ -50,7 +50,7 @@
     object-position: center;
 }
 
-.nextVideo{
+.nextVideo {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -63,17 +63,30 @@
     object-position: center;
 }
 
-.backgroundVideo{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
+.backgroundVideoFrame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+  z-index: 20;
+  width: 16rem;
+  height: 16rem;
+  object-fit: cover;
+  object-position: center;
 }
 
-.heroBottomText{
+.backgroundVideo{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.heroBottomText {
     font-family: 'zentry-regular', sans-serif;
     font-size: 6rem;
     font-weight: bold;
@@ -86,7 +99,7 @@
     right: 1.25rem;
 }
 
-.heroBelowText{
+.heroBelowText {
     font-family: 'zentry-regular', sans-serif;
     font-size: 6rem;
     font-weight: bold;
@@ -98,7 +111,7 @@
     right: 1.25rem;
 }
 
-.heroTitleBox{
+.heroTitleBox {
     position: absolute;
     left: 0;
     top: 0;
@@ -107,13 +120,13 @@
     height: 100%;
 }
 
-.heroHeading{
+.heroHeading {
     margin-top: 6rem;
     padding-left: 1.25rem;
     padding-right: 1.25rem;
 }
 
-.heroMainHeading{
+.heroMainHeading {
     font-family: 'zentry-regular', sans-serif;
     font-size: 10rem;
     font-weight: bold;
@@ -121,21 +134,21 @@
     color: var(--blue-100);
 }
 
-.heroSubHeading{
+.heroSubHeading {
     margin-bottom: 1.25rem;
     max-width: 16rem;
     font-family: 'robert-regular', sans-serif;
     color: var(--blue-100);
 }
 
-@media (min-width: 640px){
-    .heroHeading{
+@media (min-width: 640px) {
+    .heroHeading {
         padding-left: 2.5rem;
         padding-right: 2.5rem;
     }
 }
 
-.heroButton{
+.heroButton {
     background-color: var(--yellow-300) !important;
     display: flex;
     justify-content: center;
