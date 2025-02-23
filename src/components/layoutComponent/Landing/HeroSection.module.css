@@ -72,3 +72,73 @@
     object-fit: cover;
     object-position: center;
 }
+
+.heroBottomText{
+    font-family: 'zentry-regular', sans-serif;
+    font-size: 6rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    position: absolute;
+    z-index: 40;
+    color: var(--blue-75);
+    bottom: 1.25rem;
+    right: 1.25rem;
+}
+
+.heroBelowText{
+    font-family: 'zentry-regular', sans-serif;
+    font-size: 6rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    position: absolute;
+    color: #000;
+    bottom: 1.25rem;
+    right: 1.25rem;
+}
+
+.heroTitleBox{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 40;
+    width: 100%;
+    height: 100%;
+}
+
+.heroHeading{
+    margin-top: 6rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+}
+
+.heroMainHeading{
+    font-family: 'zentry-regular', sans-serif;
+    font-size: 10rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--blue-100);
+}
+
+.heroSubHeading{
+    margin-bottom: 1.25rem;
+    max-width: 16rem;
+    font-family: 'robert-regular', sans-serif;
+    color: var(--blue-100);
+}
+
+@media (min-width: 640px){
+    .heroHeading{
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+}
+
+.heroButton{
+    background-color: var(--yellow-300) !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}

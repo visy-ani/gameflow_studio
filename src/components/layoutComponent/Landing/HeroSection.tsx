@@ -1,5 +1,8 @@
 import styles from "./HeroSection.module.css";
 import { useState, useRef } from "react";
+import Button from "../../../ui/buttons/Button";
+import { TiLocationArrow } from "react-icons/ti";
+import { useGSAP } from "@gsap/react";
 
 const HeroSection = () => {
   const [currentIndex, setCurrentIndex] = useState(1);
@@ -20,6 +23,10 @@ const HeroSection = () => {
     setHasClicked(true);
     setCurrentIndex(upcomingVideoIndex);
   };
+
+  useGSAP(()=>{
+
+  },{dependencies: [currentIndex], revertOnUpdate: true})
 
   const getVideoSrc = (index: number) => `/videos/hero/hero-${index}.mp4`;
 
@@ -50,14 +57,39 @@ const HeroSection = () => {
             onLoadedData={handleVideoLoad}
           />
           <video
-            src={getVideoSrc(currentIndex === totalVideos + 1 ? 1 : currentIndex)}
+            src={getVideoSrc(
+              currentIndex === totalVideos + 1 ? 1 : currentIndex
+            )}
             autoPlay
             loop
             muted
             className={styles.backgroundVideo}
+            onLoadedData={handleVideoLoad}
           />
         </div>
+        <h1 className={styles.heroBottomText}>
+          G<b>A</b>MING
+        </h1>
+        <div className={styles.heroTitleBox}>
+          <div className={styles.heroHeading}>
+            <h1 className={styles.heroMainHeading}>
+              REDEFI<b>N</b>E
+            </h1>
+            <p className={styles.heroSubHeading}>
+              Enter the Metagame Layer <br /> Unleash the Play Economy
+            </p>
+            <Button
+              id="watch-trailer"
+              title="Watch Trailer"
+              leftIcon={<TiLocationArrow />}
+              containerClass={styles.heroButton}
+            />
+          </div>
+        </div>
       </div>
+      <h1 className={styles.heroBelowText}>
+        G<b>A</b>MING
+      </h1>
     </div>
   );
 };

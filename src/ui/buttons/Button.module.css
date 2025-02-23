@@ -1,0 +1,21 @@
+.button{
+  position: relative;
+  z-index: 10;
+  width: fit-content;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 9999px;
+  border: 1px solid gray;
+  background-color: var(--violet-50); 
+  padding: 0.75rem 1.75rem;
+  color: black;
+}
+
+.buttonText{
+  position: relative;
+  display: inline-flex;
+  overflow: hidden;
+  font-family: 'general', sans-serif;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
