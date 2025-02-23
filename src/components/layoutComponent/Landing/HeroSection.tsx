@@ -71,7 +71,7 @@ const HeroSection = () => {
     gsap.from("#video-frame", {
       clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
       borderRadius: "0%",
-      ease: "power1.inOut",
+      ease: "power3.inOut",
       scrollTrigger: {
         trigger: "#video-frame",
         start: "center center",
@@ -155,5 +155,4 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
-
 
