@@ -2,6 +2,7 @@ import { useGSAP } from '@gsap/react'
 import styles from './About.module.css'
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
+import AnimateTitle from '../../../ui/AnimateTitle/AnimateTitle';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -28,7 +29,7 @@ const About = () => {
     <div id="about" className={styles.aboutContainer}>
         <div className={styles.headerBox}>
             <h2 className={styles.heading}>Welcome to GameFlow Studio</h2>
-            <div className={styles.subHeading}>Discover the world's largest shared adventure</div>
+            <AnimateTitle/>
             <div className={styles.bottomText}>
                 <p>The Games of Games begins-your Life, now an epic MMORPG</p>
                 <p>Gameflow Studio unites every player from countless games  and platforms</p>
