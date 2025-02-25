@@ -1,13 +1,40 @@
-.subHeading {
-    margin-top: 1.25rem;
-    text-align: center;
-    font-size: 2.25rem;
-    text-transform: uppercase;
-    line-height: 0.8;
+.animatedTitle {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem; 
+  font-size: 4.5rem; 
+  text-transform: uppercase;
+  line-height: 0.8; 
+  color: #0a0a0a;
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
+.animatedLine{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
 }
 
 @media (min-width: 768px) {
-    .subHeading {
-        font-size: 6rem;
-    }
+  .animatedTitle {
+    font-size: 4rem; 
+  }
+
+  .animatedLine{
+    gap: 0.75rem;
+  }
 }
+
+.animatedWord {
+  font-family: 'Zentry', sans-serif; 
+  color: #0a0a0a;
+  font-weight: 900; 
+  opacity: 0;
+  transform: translate3d(10px, 51px, -60px) rotateY(60deg) rotateX(-40deg);
+  transform-origin: 50% 50% -150px !important;
+  will-change: opacity, transform;
+}
+  

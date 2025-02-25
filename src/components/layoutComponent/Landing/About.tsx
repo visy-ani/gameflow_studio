@@ -29,7 +29,7 @@ const About = () => {
     <div id="about" className={styles.aboutContainer}>
         <div className={styles.headerBox}>
             <h2 className={styles.heading}>Welcome to GameFlow Studio</h2>
-            <AnimateTitle/>
+            <AnimateTitle title="Discover the world's largest shared adventure" containerClass={styles.subHeading}/>
             <div className={styles.bottomText}>
                 <p>The Games of Games begins-your Life, now an epic MMORPG</p>
                 <p>Gameflow Studio unites every player from countless games  and platforms</p>
