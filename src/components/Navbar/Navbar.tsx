@@ -4,6 +4,7 @@ import { useRef } from 'react'
 import Button from '../../ui/buttons/Button';
 
 const Navbar = () => {
+  const navItems = ['Nexus','Vault','Prologue','About','Contact'];
   const navContainerRef = useRef<HTMLDivElement>(null);
   return (
     <div ref={navContainerRef} className={styles.navContainer}>
@@ -17,6 +18,13 @@ const Navbar = () => {
                 leftIcon={<TiLocationArrow />}
                 containerClass={styles.navButton}
               />
+          </div>
+          <div className={styles.links}>
+              <div className={styles.linkItems}>
+                {navItems.map((item, index) => (
+                  <a key={index} href={`#${item.toLowerCase()}`} className={styles.link}>{item}</a>
+                ))}
+              </div>
           </div>
         </nav>
       </header>
