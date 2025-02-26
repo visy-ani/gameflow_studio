@@ -108,4 +108,52 @@
   }
 }
 
-
+.playButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px 12px;
+  }
+  
+  .audio {
+    display: none;
+  }
+  
+  .barsContainer {
+    display: flex;
+    align-items: center;
+    gap: 4px; 
+  }
+  
+  .bar {
+    height: 8px; 
+    width: 2px; 
+    border-radius: 9999px;
+    background-color: white;
+    transition: all 200ms ease-in-out;
+  }
+  
+  .bar.active {
+    animation: bar 0.5s ease infinite;
+    animation-delay: calc(var(--animation-order) * 0.1s);
+  }
+  
+  @keyframes bar {
+    0% {
+      height: 6px;
+      transform: translateY(0px);
+    }
+    50% {
+      height: 16px;
+      transform: translateY(-4px);
+    }
+    100% {
+      height: 6px;
+      transform: translateY(0px);
+    }
+  }
+  
