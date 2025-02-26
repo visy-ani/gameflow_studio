@@ -6,7 +6,7 @@ const Home = () => {
     <LandingLayout>
       <HeroSection/>
       <About />
-      </LandingLayout>
+    </LandingLayout>
   )
 }
 
