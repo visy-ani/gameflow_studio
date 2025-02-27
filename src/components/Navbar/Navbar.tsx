@@ -9,35 +9,40 @@ const Navbar = () => {
   const [isAudioPlaying, setAudioPlaying] = useState(false);
   const [isIndicatorActive, setIndicatorActive] = useState(false);
   const [lastScrollY, setlastScrollY] = useState(0);
-  const [isNavVisible, setisNavVisible] = useState(true);
+  const [isNavVisible, setIsNavVisible] = useState(true);
+  const [isScrolled, setIsScrolled] = useState(false);
 
 
   const { y: currentScrollY } = useWindowScroll();
 
   useEffect(() =>{
-    if(currentScrollY === 0){
-      setisNavVisible(true);
-      navContainerRef.current?.classList.remove(styles.floatingNav);
+    if (!navContainerRef.current) return;
+
+    if (currentScrollY === 0) {
+      setIsNavVisible(true);
+      setIsScrolled(false);
+    } else if (currentScrollY > lastScrollY) {
+      setIsNavVisible(false);
+      setIsScrolled(true);
+    } else {
+      setIsNavVisible(true);
+      setIsScrolled(true);
     }
-    else if(currentScrollY > lastScrollY){
-      setisNavVisible(false);
-      navContainerRef.current?.classList.add(styles.floatingNav);
-    }
-    else{
-      setisNavVisible(true);
-      navContainerRef.current?.classList.remove(styles.floatingNav);
-    }
+
 
     setlastScrollY(currentScrollY);
   }, [currentScrollY]);
 
   useEffect(() => {
-    gsap.to(navContainerRef, {
-      y: isNavVisible ? 0 : -100,
-      opacity: isNavVisible ? 1 : 0,
-      duration: 0.5,
-    })
-  }, [isNavVisible])
+    if (navContainerRef.current) {
+      gsap.to(navContainerRef.current, {
+        y: isNavVisible ? 0 : -100,
+        opacity: isNavVisible ? 1 : 0,
+        duration: 0.5,
+        ease: "power3.out",
+      });
+    }
+  }, [isNavVisible]);
   
 
   const navItems = ["Nexus", "Vault", "Prologue", "About", "Contact"];
@@ -60,7 +65,7 @@ const Navbar = () => {
   }, [isAudioPlaying]);
 
   return (
-    <div ref={navContainerRef} className={styles.navContainer}>
+    <div ref={navContainerRef} className={`${styles.navContainer} ${isScrolled ? styles.floatingNav : ""}`}>
       <header className={styles.header}>
         <nav className={styles.nav}>
           <div className={styles.navItems}>
