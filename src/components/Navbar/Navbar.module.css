@@ -10,6 +10,11 @@
     transition-duration: 700ms;
 }
 
+.floatingNav{
+  background-color: #262626;
+  border-radius: 20px;
+}
+
 @media (min-width: 640px) {
     .navContainer{
         left: 1.5rem;
