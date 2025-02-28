@@ -1,0 +1,199 @@
+.sizeFull {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .borderHsla {
+    border: 1px solid hsla(0, 0%, 100%, 0.2);
+  }
+  
+  .bentoTitle {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .specialFont {
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .bentoTilt1 {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+  }
+  
+  .bentoTilt2 {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .section {
+    background-color: black;
+    padding-bottom: 52px;
+  }
+  
+  .textPrimary {
+    font-size: 1.125rem;
+    color: #cce0ff;
+  }
+  
+  .textSecondary {
+    max-width: 400px;
+    font-size: 1.125rem;
+    color: #cce0ff;
+    opacity: 0.5;
+  }
+  
+  .video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .bentoCardContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.25rem;
+    color: #cce0ff;
+    z-index: 10;
+    height: 100%;
+  }
+  
+  .hoverButton {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    overflow: hidden;
+    border-radius: 9999px;
+    background-color: black;
+    padding: 0.5rem 1.25rem;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+  }
+  
+  .hoverEffect {
+    pointer-events: none;
+    position: absolute;
+    inset: -1px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .featuresSection {
+    background-color: black;
+    padding-bottom: 52px;
+  }
+  
+  .featuresContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .featuresHeader {
+    padding: 5rem 0;
+    text-align: left;
+  }
+  
+  .featuresText {
+    font-size: 1.125rem;
+    color: #cce0ff;
+  }
+  
+  .featuresTextSecondary {
+    max-width: 400px;
+    font-size: 1.125rem;
+    color: #cce0ff;
+    opacity: 0.5;
+  }
+  
+  .bentoGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    height: 135vh;
+    width: 100%;
+    gap: 7px;
+  }
+  
+  .bentoCard {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.25rem;
+    color: #cce0ff;
+    z-index: 10;
+    height: 100%;
+  }
+  
+  .bentoCardTitle {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .bentoCardDescription {
+    margin-top: 12px;
+    max-width: 400px;
+    font-size: 0.875rem;
+  }
+  
+  .comingSoonButton {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    overflow: hidden;
+    border-radius: 9999px;
+    background-color: black;
+    padding: 0.5rem 1.25rem;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    border: 1px solid hsla(0, 0%, 100%, 0.2);
+  }
+  
+  .comingSoonHover {
+    pointer-events: none;
+    position: absolute;
+    inset: -1px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .bentoTiltContainer {
+    position: relative;
+    height: 96vh;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+  }
+  
+  .videoFeature {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
