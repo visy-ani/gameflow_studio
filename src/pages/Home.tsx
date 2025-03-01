@@ -1,5 +1,6 @@
 import LandingLayout from "../layouts/LandingLayout/LandingLayout";
 import { HeroSection, About, Features } from "../components";
+import Story from "../components/layoutComponent/Landing/Story";
 
 const Home = () => {
   return (
@@ -7,6 +8,7 @@ const Home = () => {
       <HeroSection/>
       <About />
       <Features/>
+      <Story/>
     </LandingLayout>
   )
 }

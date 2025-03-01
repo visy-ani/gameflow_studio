@@ -24,7 +24,8 @@ const About = () => {
             height: "100vh",
             borderRadius: "0%",
         });
-    });    
+    });   
+    
   return (
     <div id="about" className={styles.aboutContainer}>
         <div className={styles.headerBox}>

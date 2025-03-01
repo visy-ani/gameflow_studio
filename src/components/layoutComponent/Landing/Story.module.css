@@ -1,0 +1,34 @@
+.storySection {
+    min-height: 100dvh;
+    width: 100vw;
+    background-color: black;
+    color: var(--blue-50);
+}
+
+.storyContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+}
+
+.storyContainer > p {
+    font-family: 'general', sans-serif;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+    .storyContainer > p {
+        font-size: 10px;
+    }
+}
+
+.storyContainer > div{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
