@@ -75,7 +75,7 @@ export const BentoCard: React.FC<BentoCardProps> = ({
       <video src={src} loop muted autoPlay className={`${styles.video} ${styles.sizeFull}`} />
       <div className={styles.bentoCardContainer}>
         <div>
-          <h1 className={`${styles.bentoTitle} ${styles.specialFont}`}>{title}</h1>
+          <h1 className={`${styles.bentoTitle}`}>{title}</h1>
           {description && <p className={styles.bentoCardDescription}>{description}</p>}
         </div>
 

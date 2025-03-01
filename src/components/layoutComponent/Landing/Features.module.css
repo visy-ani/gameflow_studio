@@ -10,11 +10,10 @@
 .bentoTitle {
   font-size: 2rem;
   font-weight: bold;
+  text-transform: uppercase;
+  font-family: 'zentry', sans-serif;
 }
 
-.specialFont {
-  font-family: 'Arial', sans-serif;
-}
 
 .bentoTilt {
   position: relative;
@@ -113,6 +112,9 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .featuresHeader {
