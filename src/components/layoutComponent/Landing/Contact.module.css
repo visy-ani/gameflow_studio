@@ -27,6 +27,7 @@
     position: absolute;
     left: -5rem;
     left: 0;
+    top: 0;
     height: 100%;
     width: 18rem;
     overflow: hidden;
@@ -52,4 +53,90 @@
 
 .contactClipPath2{
     clip-path: polygon(29% 15%, 85% 30%, 50% 100%, 10% 64%);
+    transform: translateY(15rem);
+}
+
+@media (min-width: 1024px){
+    .contactClipPath2{
+        transform: translateY(10rem);
+    }
+}
+
+.contact2{
+  position: absolute;
+  top: -10rem;          
+  left: 5rem;           
+  width: 15rem;        
+}
+
+@media (min-width: 640px) { 
+  .contact2 {
+    top: 50%;
+  }
+}
+
+@media (min-width: 768px) { 
+  .contact2 {
+    left: auto;   
+    right: 2.5rem; 
+  }
+}
+
+@media (min-width: 1024px) { 
+  .contact2 {
+    top: 5rem; 
+    width: 20rem; 
+  }
+}
+
+.contactClipPath3{
+    position: absolute;
+}
+
+@media (min-width: 768px){
+    .contactClipPath3{
+        transform: scale(1.25);
+    }
+}
+
+.contactClipPath4{
+    clip-path: polygon(16% 0, 89% 15%, 75% 100%, 0 97%);
+}
+
+@media (min-width: 768px){
+    .contactClipPath4{
+        transform: scale(1.25);
+    }
+}
+
+.contactText{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.contactTitle{
+    font-family: 'general', sans-serif;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+.contactDescription{
+    font-family: 'zentry', sans-serif;
+    margin-top: 2.5rem;
+    width: 100%;
+    font-size: 5rem;
+    line-height: 0.9;
+}
+
+@media (min-width: 768px){
+    .contactDescription{
+        font-size: 6rem;
+    }
+}
+
+.contactButton{
+    cursor: pointer;
+    margin-top: 2.5rem;
 }
