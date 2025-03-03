@@ -1,50 +1,25 @@
-# React + TypeScript + Vite
+# Gameflow Studio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Gameflow Studio is a project built to practice and experiment with **GSAP (GreenSock Animation Platform)**, focusing on creating smooth and engaging animations for web interfaces.
 
-Currently, two official plugins are available:
+## 🚀 Features
+- Advanced GSAP animations for interactive UI elements
+- Scroll-based animations using **ScrollTrigger**
+- SVG animations for enhanced visual effects
+- Smooth transitions and motion effects
+- Responsive and optimized for different screen sizes
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠️ Technologies Used
+- **GSAP** – For animations and transitions
+- **React** – For structuring the project
+- **Module.css** – For styling
+- **SVG** – For scalable animations
 
-## Expanding the ESLint configuration
+## 🎯 Learning Outcomes
+- Mastering **GSAP animations**
+- Implementing **scroll-based animations** with `ScrollTrigger`
+- Understanding **timelines and easing effects**
+- Enhancing UI/UX through smooth animations
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+---
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
