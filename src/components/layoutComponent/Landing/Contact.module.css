@@ -1,0 +1,55 @@
+.contactContainer{
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    min-height: 24rem;
+    width: 100vw;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+}
+
+.contactBox{
+    position: relative;
+    border-radius: 0.5rem;
+    background-color: black;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    color: #ebf8ff;
+}
+
+@media (min-width: 768px){
+    .contactBox{
+        overflow: hidden;
+    }
+    
+}
+
+.contact{
+    position: absolute;
+    left: -5rem;
+    left: 0;
+    height: 100%;
+    width: 18rem;
+    overflow: hidden;
+    display: none; 
+}
+
+@media (min-width: 768px){
+    .contact{
+        display: block;
+    } 
+}
+
+@media (min-width: 1024px) {
+    .custom-class {
+      left: 5rem;  
+      width: 24rem; 
+    }
+  }
+
+.contactClipPath{
+    clip-path: polygon(25% 0%, 74% 0, 69% 64%, 34% 73%);
+}
+
+.contactClipPath2{
+    clip-path: polygon(29% 15%, 85% 30%, 50% 100%, 10% 64%);
+}

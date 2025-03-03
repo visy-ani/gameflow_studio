@@ -1,5 +1,5 @@
 import LandingLayout from "../layouts/LandingLayout/LandingLayout";
-import { HeroSection, About, Features } from "../components";
+import { HeroSection, About, Features, Contact, Footer } from "../components";
 
 const Home = () => {
   return (
@@ -8,6 +8,8 @@ const Home = () => {
       <About />
       <Features/>
       {/* <Story/> */}
+      <Contact />
+      <Footer />
     </LandingLayout>
   )
 }
